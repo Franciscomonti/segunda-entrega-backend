@@ -1,0 +1,32 @@
+[
+  {
+    "id": "9b923111-0118-4f4f-8547-7d196a3a3b7a",
+    "title": "producto 2",
+    "description": "producto 2",
+    "code": "w4314",
+    "price": 2000,
+    "stock": 10,
+    "category": "not category",
+    "thumbnails": "url producto 2"
+  },
+  {
+    "id": "47db3b49-aa14-406c-ad41-074be7e26910",
+    "title": "producto 1",
+    "description": "producto 1",
+    "code": "asdasda",
+    "price": 2000,
+    "stock": 10,
+    "category": "not category",
+    "thumbnails": "url producto 1"
+  },
+  {
+    "id": "eb04bda0-7669-400f-9f46-837ef788c638",
+    "title": "producto 4",
+    "description": "producto 4",
+    "code": "3333",
+    "price": 4000,
+    "stock": 10,
+    "category": "not category",
+    "thumbnails": "url producto 1"
+  }
+]

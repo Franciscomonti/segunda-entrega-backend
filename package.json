@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.9.1",
+    "uuid": "^9.0.0"
+  },
+  "name": "primer-entrega-backend",
+  "version": "1.0.0",
+  "description": "Primer entrega final coderhouse express cart product",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Franciscomonti/primer-entrega-backend-coder.git"
+  },
+  "keywords": [
+    "express",
+    "backend",
+    "coderhouse"
+  ],
+  "author": "Monti Francisco Javier",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Franciscomonti/primer-entrega-backend-coder/issues"
+  },
+  "homepage": "https://github.com/Franciscomonti/primer-entrega-backend-coder#readme"
+}

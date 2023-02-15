@@ -4,9 +4,6 @@ import controller from '../controller/product.js';
 
 const router = Router()
 
-// const express = require('express');
-// const router = express.Router();
-
 router.get('/', controller.getAllProducts)
 
 router.get('/:id', controller.getProductById)

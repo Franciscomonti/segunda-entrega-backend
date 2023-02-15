@@ -1,18 +1,4 @@
-import mongoose from "mongoose";
-
-const productCollection = 'products';
-
-const productSchema = new mongoose.Schema({
-    title: String,
-    description: String,
-    code: String,
-    price: Number,
-    stock: Number,
-    category: String,
-    thumbnails: String,
-})
-
-const productModel = mongoose.model(productCollection, productSchema);
+import productModel from '../models/products.model.js';
 
 export default {
 

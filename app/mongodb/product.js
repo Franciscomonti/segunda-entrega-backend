@@ -1,7 +1,4 @@
-const { resolve4 } = require('dns');
-const fs = require('fs');
-
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const productCollection = 'products';
 
@@ -17,7 +14,7 @@ const productSchema = new mongoose.Schema({
 
 const productModel = mongoose.model(productCollection, productSchema);
 
-module.exports = {
+export default {
 
     save: (product) => {
         return new Promise(async (resolve, reject) => {

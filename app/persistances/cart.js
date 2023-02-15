@@ -1,7 +1,7 @@
-const fs = require('fs');
-const { v4: uuidv4 } = require('uuid');
+import fs from 'fs';
 
-module.exports = {
+
+export default {
 
     create: (cart) => {
         return new Promise ((resolve, reject) => {

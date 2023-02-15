@@ -1,4 +1,4 @@
-const service = require('../persistances/cart.js')
+import service from '../persistances/cart.js'
 
 class Cart {
     constructor(id) {
@@ -7,7 +7,7 @@ class Cart {
     }
 }
 
-module.exports = {
+export default {
 
     create : (req, res) => {
         const newCart = new Cart();

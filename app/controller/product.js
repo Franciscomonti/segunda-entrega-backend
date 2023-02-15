@@ -1,4 +1,4 @@
-const persistance = require('../mongodb/product.js')
+import persistance from '../mongodb/product.js'
 
 class Product {
     constructor(id, title, description, code, price, stock, category, thumbnails)
@@ -14,7 +14,7 @@ class Product {
     }
 }
 
-module.exports = {
+export default {
 
     create: (req, res) => {
         const data = req.body

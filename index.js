@@ -1,7 +1,14 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const dotenv = require('dotenv')
-require('dotenv').config()
+import express from "express";
+import * as dotenv from "dotenv";
+import mongoose from "mongoose";
+import routerProduct from './app/routes/product.js';
+import  routerCart from './app/routes/cart.js';
+
+
+// const express = require('express');
+// const mongoose = require('mongoose');
+// const dotenv = require('dotenv')
+// require('dotenv').config()
 
 const app = express();
 
@@ -11,9 +18,6 @@ const DB_USER = process.env.DB_USER;
 const DB_PASS = process.env.DB_PASS;
 const DB_NAME = process.env.DB_NAME;
 
-
-const routerProduct = require('./app/routes/product.js');
-const routerCart = require('./app/routes/cart.js');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

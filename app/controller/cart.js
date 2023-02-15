@@ -1,4 +1,4 @@
-import service from '../persistances/cart.js'
+import service from '../mongodb/cart.js'
 
 class Cart {
     constructor(id) {

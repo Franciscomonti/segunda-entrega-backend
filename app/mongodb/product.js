@@ -1,3 +1,4 @@
+const { resolve4 } = require('dns');
 const fs = require('fs');
 
 const mongoose = require("mongoose");
@@ -56,7 +57,6 @@ module.exports = {
                 product.id = saved.id
                 resolve(product)
                 return;
-
             } catch (error) {
                 reject(error);
             }
@@ -95,27 +95,16 @@ module.exports = {
         })
     },
 
-
     update: (id, dataToUpdate) => {
         return new Promise(async (resolve, reject) => {
-            try {
-                let productToUpdate = await productModel.findById(id)
-                if (productToUpdate) {
-                    const indexProductToUpdate = productsList.findIndex((product) => product.id === prodToUpdate.id);
-                    productsList[indexProductToUpdate] = {
-                        ...productsList[indexProductToUpdate],
-                        ...dataToUpdate
-                    };
-                    fs.writeFileSync(`./data/product.json`, JSON.stringify(productsList, null, 2))
-                    resolve(productsList[indexProductToUpdate])
-                }
-                resolve("The id of the product is not available");
-            } catch (error) {
+            try{
+                const product = await productModel.findByIdAndUpdate(id, dataToUpdate);
+                resolve(product)
+            }catch (error) {
                 reject(error);
             }
         })
     },
-
 
     deleted: (id) => {
         return new Promise(async (resolve, reject) => {

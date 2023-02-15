@@ -44,10 +44,28 @@ module.exports = {
 
     updateProduct: (req, res) => {
         let id = req.params.id
-        let dataToUpdate = req.body
+        const {
+            title,
+            description,
+            code,
+            price,
+            thumbnail,
+            stock,
+            category,
+            
+        } = req.body;
 
         persistance
-            .update(id, dataToUpdate)
+            .update(id, {
+                title,
+                description,
+                code,
+                price,
+                thumbnail,
+                stock,
+                category,
+                
+            })
             .then(productUpdate => res.status(200).json({'product update correct': productUpdate}))
             .catch(err => res.status(500).json({err: err.message}))
     },

@@ -41,5 +41,17 @@ export default {
                 error: err.message
             }))
 
+    },
+
+    deleteCart: (req, res)=>{
+        let cartId= req.params.cId;
+
+        service
+            .deleteCart(cartId)
+            .then((cart) => res.status(200).json({'cart deleted' : cart}))
+            .catch(err => res.status(500).json({
+                error: err.message
+            }))
+
     }
 }

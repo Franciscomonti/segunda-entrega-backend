@@ -9,4 +9,6 @@ router.post('/:cId/:pId', controller.addProductToCart)
 
 router.get('/:cId' , controller.getAllProducts)
 
+router.delete('/:cId', controller.deleteCart)
+
 export default router;
